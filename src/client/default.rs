@@ -144,9 +144,9 @@ impl<'a> Yts<'a> {
             filter.order_by_to_str(),
             filter.year_to_str(),
             if filter.page <= 1 {
-                ""
+                String::new()
             } else {
-                &format!("?page={}", filter.page)
+                format!("?page={}", filter.page)
             }
         ))
     }

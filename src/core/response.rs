@@ -29,7 +29,7 @@ impl Page {
     /// Assumes 20 movies per page.
     fn create(current: u32, total: u32) -> Self {
         let of = if total > 20 {
-            (total / 20) + (if total % 20 > 0 { 1 } else { 0 })
+            (total / 20) + (if !total.is_multiple_of(20) { 1 } else { 0 })
         } else {
             1
         };
