@@ -34,7 +34,7 @@ impl Default for Yts<'_> {
     /// Creates a default `Yts` client with the official host and a 10-second timeout.
     fn default() -> Self {
         Self {
-            host: "https://yts.lt",
+            host: "https://yts.bz",
             timeout: Duration::from_secs(10),
         }
     }
