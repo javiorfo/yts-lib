@@ -5,7 +5,7 @@ use crate::Genre;
 /// # Examples
 ///
 /// ```
-/// use yts_movies::{Filters, Genre, Quality, Rating, Year, OrderBy};
+/// use yts::{Filters, Genre, Quality, Rating, Year, OrderBy};
 ///
 /// let filters = Filters::default()
 ///     .quality(Quality::P1080)

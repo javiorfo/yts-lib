@@ -14,9 +14,9 @@ use crate::{Movie, Response, Torrent, client::Filter};
 /// ```
 /// # #[cfg(feature = "blocking")]
 /// # {
-/// use yts_movies::blocking;
+/// use yts::blocking;
 ///
-/// # fn example() -> yts_movies::Result {
+/// # fn example() -> yts::Result {
 ///     let yts = blocking::Yts::default();
 ///     let response = yts.search("Inception")?;
 ///     for movie in response.movies {
@@ -109,10 +109,7 @@ mod test {
     #[test]
     fn test_blocking_search() {
         let yts = Yts::default();
-        let results = yts.search_with_filter(
-            "godfather",
-            Filters::default().build(),
-        );
+        let results = yts.search_with_filter("godfather", Filters::default().build());
 
         assert!(results.is_ok());
         assert!(!results.as_ref().unwrap().movies.is_empty());

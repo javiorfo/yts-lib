@@ -1,4 +1,4 @@
-use yts_movies::{Filters, OrderBy, Year, blocking};
+use yts::{Filters, OrderBy, Year, blocking};
 
 fn main() {
     let yts = blocking::Yts::default();

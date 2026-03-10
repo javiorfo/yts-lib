@@ -1,25 +1,25 @@
 [package]
-name = "yts-movies"
-version = "0.2.5"
+name = "yts-lib"
+version = "0.1.0"
 edition = "2024"
 description = "Library to search YTS movies info and torrent links"
 authors = ["Javier Orfo <javierorfo@protonmail.com>"]
 license = "MIT"
-repository = "https://github.com/javiorfo/yts-movies"
-homepage = "https://github.com/javiorfo/yts-movies#readme"
-keywords = ["yts", "yify", "yts-movies", "yts-torrents", "torrents"]
+repository = "https://github.com/javiorfo/yts-lib"
+homepage = "https://github.com/javiorfo/yts-lib#readme"
+keywords = ["yts", "yts-api", "yts-lib", "yts-torrents", "torrents"]
 
 [lib]
-name = "yts_movies"
+name = "yts"
 path = "src/lib.rs"
 
 [dependencies]
-reqwest = { version = "0.12.20", optional = true }
-scraper = "0.23.1"
-thiserror = "2.0.12"
+reqwest = { version = "0.13.2", optional = true }
+scraper = "0.25.0"
+thiserror = "2.0.18"
 
 [dev-dependencies]
-tokio = { version = "1.45.1", features = ["macros", "rt-multi-thread"] }
+tokio = { version = "1.50.0", features = ["macros", "rt-multi-thread"] }
 
 [features]
 default = ["async"]

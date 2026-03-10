@@ -1,4 +1,4 @@
-# yts-movies
+# yts-lib
 *Library to search YTS movies info and torrent links*
 
 ## Description
@@ -11,23 +11,23 @@ Add this crate to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-yts-movies = "0.2.5"
+yts-lib = "0.1.0"
 ```
 
 #### Enable blocking feature if needed
 
 ```toml
 [dependencies]
-yts-movies = { version = "0.2.5", features = ["blocking"] }
+yts-lib = { version = "0.1.0", features = ["blocking"] }
 ```
 
 ## Async Example (default)
 
 ```rust
-use yts_movies::{Filters, OrderBy, Year, Yts};
+use yts::{Filters, OrderBy, Year, Yts};
 
 #[tokio::main]
-async fn main() -> yts_movies::Result {
+async fn main() -> yts::Result {
     let yts = Yts::default();
     let response = yts
         .search_with_filter(
@@ -53,7 +53,7 @@ async fn main() -> yts_movies::Result {
 ```
 
 ## Details
-- Here are more [examples](https://github.com/javiorfo/yts-movies/tree/master/examples)
+- Here are more [examples](https://github.com/javiorfo/yts-lib/tree/master/examples)
 
 ## Features
 - Default async search. Blocking search available too
@@ -61,7 +61,7 @@ async fn main() -> yts_movies::Result {
 - Obtain not only info and metadata but also a torrent download link of the movie.
 
 ## Docs
-Find all the configuration options in the full [documentation](https://docs.rs/yts-movies/0.2.5/yts_movies/).
+Find all the configuration options in the full [documentation](https://docs.rs/yts-lib/0.1.0/yts_lib/).
 
 ---
 

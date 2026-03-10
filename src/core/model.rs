@@ -100,7 +100,7 @@ impl From<&Genre> for &str {
     /// # Examples
     ///
     /// ```
-    /// use yts_movies::Genre;
+    /// use yts::Genre;
     ///
     /// let genre = Genre::Action;
     /// let genre_str: &str = (&genre).into();
@@ -151,7 +151,7 @@ impl From<&str> for Genre {
     /// # Examples
     ///
     /// ```
-    /// use yts_movies::Genre;
+    /// use yts::Genre;
     ///
     /// let genre = Genre::from("Action");
     /// assert!(matches!(genre, Genre::Action));

@@ -13,10 +13,10 @@
 //!
 //! ```
 //! # #[cfg(feature = "async")]
-//! use yts_movies::{Filters, OrderBy, Year, Yts};
+//! use yts::{Filters, OrderBy, Year, Yts};
 //!
 //! #[tokio::main]
-//! async fn main() -> yts_movies::Result {
+//! async fn main() -> yts::Result {
 //!     let yts = Yts::default();
 //!     let response = yts
 //!         .search_with_filter(

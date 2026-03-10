@@ -1,4 +1,4 @@
-use yts_movies::{Filters, OrderBy, Year, Yts};
+use yts::{Filters, OrderBy, Year, Yts};
 
 #[tokio::main]
 async fn main() {
